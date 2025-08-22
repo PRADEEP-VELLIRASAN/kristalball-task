@@ -1,53 +1,102 @@
-# Backend Project for Authentication
+# Military Asset Management System
 
-This project implements a backend service using Express for handling authentication functionalities such as login and registration.
+A full-stack web application for managing military assets, assignments, purchases, requests, and transfers. The system provides a secure login, user authentication, and a modern dashboard for tracking and managing assets efficiently.
 
-## Project Structure
+---
 
+## Features
+
+- **User Authentication:** Secure login and JWT-based authentication.
+- **Asset Dashboard:** Visualize and manage military assets with charts and metrics.
+- **Assignments Management:** Assign assets to personnel and track assignments.
+- **Purchases & Expenditures:** Record and manage asset purchases and expenditures.
+- **Requests & Transfers:** Submit, approve, and track asset requests and transfers.
+- **Recent Activity Feed:** View the latest actions and changes in the system.
+- **Responsive UI:** Modern, mobile-friendly interface built with Next.js and Tailwind CSS.
+
+---
+
+## Tech Stack
+
+**Frontend:**
+- Next.js (React)
+- TypeScript
+- Tailwind CSS
+
+**Backend:**
+- Node.js
+- Express.js
+- TypeScript
+- JWT for authentication
+
+---
+
+## How to Run the Project
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- pnpm (or npm/yarn)
+- (Optional) MongoDB or another database if you extend backend data storage
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/military-asset-management.git
+cd military-asset-management
 ```
-backend
-├── src
-│   ├── app.ts                  # Entry point of the application
-│   ├── controllers             # Contains controllers for handling requests
-│   │   └── authController.ts   # Authentication-related request handlers
-│   ├── routes                  # Contains route definitions
-│   │   └── authRoutes.ts       # Authentication routes
-│   ├── middleware              # Contains middleware functions
-│   │   └── authMiddleware.ts    # Authentication middleware
-│   ├── models                  # Contains data models
-│   │   └── userModel.ts        # User data model
-│   ├── services                # Contains business logic
-│   │   └── authService.ts      # Authentication service
-│   └── types                   # Contains TypeScript types
-│       └── index.ts            # Type definitions
-├── package.json                # NPM dependencies and scripts
-├── tsconfig.json               # TypeScript configuration
-└── README.md                   # Project documentation
+
+### 2. Install Dependencies
+
+#### Frontend
+
+```bash
+cd client
+pnpm install
 ```
 
-## Setup Instructions
+#### Backend
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd backend
-   ```
+```bash
+cd ../backend
+pnpm install
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### 3. Run the Development Servers
 
-3. **Run the application:**
-   ```bash
-   npm start
-   ```
+#### Backend
 
-## Usage
+```bash
+pnpm run dev
+```
 
-- The application exposes authentication routes for login and registration.
-- Use tools like Postman or curl to test the endpoints.
+#### Frontend
+
+Open a new terminal:
+
+```bash
+cd client
+pnpm dev
+```
+
+### 4. Access the App
+
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend API: [http://localhost:5000](http://localhost:5000) (default)
+
+---
+
+## Customization
+
+- Update backend `.env` for JWT secrets and database connection.
+- Extend models and routes as needed for more asset types or features.
+
+---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
+
+---
+
+**Contributions
